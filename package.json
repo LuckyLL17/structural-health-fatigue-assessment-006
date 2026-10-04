@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test:e2e": "tsc scripts/e2e.ts --outDir .tmp-e2e --module NodeNext --moduleResolution NodeNext --target ES2022 --types node && node .tmp-e2e/e2e.js"
   },
   "dependencies": {
     "fastify": "^5.0.0"
